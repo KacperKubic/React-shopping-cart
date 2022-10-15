@@ -1,17 +1,21 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Nav from "./Components/Nav";
+import './App.css';
+import Header from "./Components/Header";
 import Home from "./Components/Home";
+import Cart from "./Components/Cart";
 
 function App() {
   return (
-    <div className="App">
-      <Nav/>
-      <Router>
+    <Router>
+      <div className="App">
+      <Header/>
         <Routes>
           <Route path="/" element={<Home/>}/>
+          <Route path="/cart" element={<Cart/>}/>
         </Routes>
-      </Router>
-    </div>
+      </div>
+    </Router>
+    
   );
 }
 
