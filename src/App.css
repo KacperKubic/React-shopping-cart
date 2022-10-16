@@ -32,34 +32,24 @@ body{
 
 .home{
     background-color: whitesmoke;
-    height: auto;
-    min-height: 92vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    place-items: center;
-    justify-content: center;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 100vw;
 }
 
-.itemList .product{
-    border-radius: 15px;
-    width: 300px;
-    height: 350px;
-    margin: 20px;
-    box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+.product{
+    width: 25%;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black
 }
 
-.itemList .product div{
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    width: 100%;
-    height: 250px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-.itemList .product h3,
-.itemList .product p{
-    margin-top: 5px;
-    margin-left: 20px;
+.productDescription{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
 }

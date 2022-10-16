@@ -1,9 +1,12 @@
-const SingleProduct = ({image, name, price}) => {
+const SingleProduct = (product) => {
     return ( 
         <div className='product'>
-            <div style={{backgroundImage: `url(${image})`}}></div>
-            <h3>{name}</h3>
-            <p>{price}PLN</p>
+            <img src={product.img} alt={product.name}/>
+            <div className='productDescription'>
+                <span>{product.name}</span>
+                <span>{product.price} PLN</span>
+            </div>
+            <button className='add'>+</button>
         </div>
      );
 }
