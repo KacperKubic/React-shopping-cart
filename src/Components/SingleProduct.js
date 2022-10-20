@@ -1,12 +1,21 @@
-const SingleProduct = (product) => {
+const SingleProduct = ({product, cart, setCart}) => {
     return ( 
         <div className='product'>
-            <img src={product.img} alt={product.name}/>
+            <img className='productImage' src={product.image} alt={product.name}/>
             <div className='productDescription'>
                 <span>{product.name}</span>
-                <span>{product.price} PLN</span>
+                <span>{product.price.toFixed(2)} PLN</span>
             </div>
-            <button className='add'>+</button>
+            {cart.includes(product) ? 
+            (
+                <button className='add' onClick={() => {setCart(cart.filter((item)=>item.id !== product.id))}}>
+                remove
+                </button>
+            ) : (
+                <button className='add' onClick={() => {setCart([...cart, product])}}>
+                +
+                </button>
+            )}
         </div>
      );
 }
