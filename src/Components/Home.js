@@ -1,12 +1,12 @@
-import { products } from './ProductList.js';
+import { products } from '../ProductList.js';
 import SingleProduct from './SingleProduct.js';
 
 
-const Home = ({cart, setCart}) => {
+const Home = () => {
     return ( 
         <div className="home">
             {products.map((product, key) => {
-                return <SingleProduct key={key} product={product} cart={cart} setCart={setCart}/>
+                return <SingleProduct key={key} product={product}/>
             })}
         </div>
      );
