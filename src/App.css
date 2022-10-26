@@ -1,9 +1,5 @@
-body{
-    background-color: whitesmoke;
-}
-
 .header{
-    width: 100vw;
+    width: 100%;
     height: 8vh;
     display: flex;
     background-color: darkolivegreen;
@@ -33,17 +29,14 @@ body{
 .home{
     background-color: whitesmoke;
     padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
 
 .product{
-    width: 25%;
+    height: 450px;
     padding: 10px;
     margin: 10px;
-    max-height: 450px;
     display: flex;
     flex-direction: column;
     border: 1px solid black
@@ -59,14 +52,15 @@ body{
     padding: 5px;
 }
 
+
 .cartProducts{
     background-color: whitesmoke;
     padding: 20px;
-    min-height: 80vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    max-width: 100vw;
+    min-height: 82vh;
+    background-color: whitesmoke;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
 }
 
 .cartTotal{

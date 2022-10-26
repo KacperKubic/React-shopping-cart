@@ -1,5 +1,6 @@
 import { CartContext } from '../Context';
 import { useContext } from 'react';
+import { BsFillCartPlusFill, BsFillCartDashFill } from 'react-icons/bs'
 
 const SingleProduct = ({product}) => {
     const {cart, setCart} = useContext(CartContext)
@@ -14,11 +15,11 @@ const SingleProduct = ({product}) => {
             {cart.includes(product) ? 
             (
                 <button className='add' onClick={() => {setCart(cart.filter((item)=>item.id !== product.id))}}>
-                remove
+                    <BsFillCartDashFill/>
                 </button>
             ) : (
                 <button className='add' onClick={() => {setCart([...cart, product])}}>
-                +
+                    <BsFillCartPlusFill/>
                 </button>
             )}
         </div>
